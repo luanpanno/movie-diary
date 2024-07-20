@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "rimraf dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "tscpaths": "^0.0.9",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "rimraf": "^6.0.1"
+  }
+}
